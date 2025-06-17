@@ -1,0 +1,33 @@
+body {
+  background-color: #ffe6f0; /* light pink */
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 2em;
+}
+
+a {
+  color: #cc6699; /* deeper pink for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  color: #b30059;
+}
+
+code {
+  background-color: #fff0f5;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+pre {
+  background-color: #fff0f5;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
