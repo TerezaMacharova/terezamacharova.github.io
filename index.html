@@ -10,20 +10,20 @@
 </head>
 <body>
 
-    <header>
-        <h1>
-            Hello! My name is Tereza.
-        </h1>
-       
-        <p> 
-            I'm a computer science stundent at Charles university where I specialize on Artificial Intelligence.
-        </p>
-
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <header class="site-header">
+        <div class="intro>"
+            <h1>Hello! My name is Tereza.</h1>
+            <p>I'm a computer science stundent at Charles university where I specialize on Artificial Intelligence.</p>
+        
+            <nav class="main-nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+        <div class="profile-pic">
+            <img src="your-photo.jpg" alt="Photo of me">
+        </div>
     </header>
 
     {% include about.html %}
