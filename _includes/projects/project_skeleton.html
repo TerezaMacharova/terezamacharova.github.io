@@ -1,41 +1,14 @@
 <!-- _includes/projects/project-skeleton.html -->
-<article class="project">
-  <h3 class="project-title">{{ project.title | default: "Project Title" }}</h3>
-  <div class="project-content {{ project.invert | default: "" }}">
+<article class="project reveal">
+  <h3 class="project-title">{{ project.title }}
+    <a href="{{ project.url }}">{{ project.title }}</a>
+  </h3>
+  <div class="project-content {{ project.invert }}">
     <div class="project-text">
-      <p>{{ project.description | default: "Short description of the project goes here." }}</p>
+      <p>{{ project.description }}</p>
     </div>
     <div class="project-image">
-      <img src="{{ project.image | default: "/assets/images/project.jpg" }}" alt="{{ project.title | default: "Project" }} screenshot">
+      <img src="{{ project.image }}" alt="{{ project.title }} screenshot">
     </div>
   </div>
 </article>
-
-<!-- Usage in your main page (e.g. index.html) -->
-<section id="projects">
-  {% comment %} Include Project #1 {% endcomment %}
-  {% include projects/project1.html %}
-
-  {% comment %} Include Project #2 {% endcomment %}
-  {% include projects/project2.html %}
-</section>
-
-<!-- If you want to generate many from data: -->
-<!-- _data/projects.yml -->
-<!--
-- title: "Project One"
-  description: "A brief summary of project one."
-  image: "/assets/images/project-1.jpg"
-  invert: ""
-- title: "Project Two"
-  description: "A brief summary of project two."
-  image: "/assets/images/project-2.jpg"
-  invert: "invert"
--->
-
-<!-- Loop in index.html -->
-<section id="projects">
-  {% for project in site.data.projects %}
-    {% include projects/project-skeleton.html project=project %}
-  {% endfor %}
-</section>

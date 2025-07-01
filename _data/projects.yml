@@ -1,0 +1,12 @@
+# _data/projects.yml
+- title: "Project One"
+  description: "A short description of project one…"
+  image: "/assets/images/project-1.jpg"
+  invert: ""            # leave blank for text-left/image-right
+  url: "/projects/project1.html"
+
+- title: "Project Two"
+  description: "A short description of project two…"
+  image: "/assets/images/project-2.jpg"
+  invert: "invert"      # adds 'invert' class for image-left/text-right
+  url: "/projects/project2.html"
