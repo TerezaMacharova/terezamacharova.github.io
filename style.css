@@ -1,33 +1,119 @@
+/* RESET + BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  background-color: #ffe6f0; /* light pink */
+  font-family: sans-serif;
   color: #333;
-  font-family: Arial, sans-serif;
-  margin: 2em;
+  line-height: 1.6;
 }
 
-a {
-  color: #cc6699; /* deeper pink for links */
+/* HEADER / FRAME 1 */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+.intro p {
+  margin-bottom: 1rem;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.main-nav a {
   text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-a:hover {
-  text-decoration: underline;
+/* ABOUT SECTION */
+.about {
+  padding: 4rem 1rem;
+  background: #f9f9f9;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-content {
+  max-width: 800px;
 }
 
-h1, h2, h3 {
-  color: #b30059;
+/* PROJECTS / FRAME 2 */
+.projects {
+  padding: 4rem 1rem;
+}
+.project {
+  margin-bottom: 3rem;
+}
+.project-title {
+  display: inline-block;
+  background: #eee;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.project-content {
+  display: flex;
+  gap: 2rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+.project-content.invert {
+  flex-direction: row-reverse;
+}
+.project-text,
+.project-image {
+  flex: 1;
+}
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-code {
-  background-color: #fff0f5;
-  padding: 0.2em 0.4em;
+/* CONTACT SECTION */
+.contact {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn {
+  padding: .75rem 1.5rem;
+  border: 2px solid #333;
+  text-decoration: none;
+  color: #333;
   border-radius: 4px;
-  font-family: monospace;
+  transition: background .3s, color .3s;
+}
+.btn:hover {
+  background: #333;
+  color: #fff;
 }
 
-pre {
-  background-color: #fff0f5;
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
+/* RESPONSIVE TWEAKS */
+@media (max-width: 700px) {
+  .site-header { flex-direction: column; text-align: center; gap: 1.5rem; }
+  .project-content { flex-direction: column; }
+  .project-content.invert { flex-direction: column; }
 }
