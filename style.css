@@ -56,13 +56,25 @@ h3 { font-size: 1.5rem; }
   padding: 2rem 1rem;
   border-bottom: 1px solid #333;
 }
+
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
+
 .main-nav a {
   font-weight: 600;
+}
+
+.intro {
+    flex: 1 1 100%;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
 }
 
 /* ---------------------------------- 
@@ -73,6 +85,15 @@ section {
 }
 .about {
   background: #222;
+}
+.profile-pic {
+  flex: 0 0 auto;
+}
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .projects {
   background: var(--bg);
@@ -155,9 +176,16 @@ section {
   .site-header {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
   }
-  .project-content {
-    flex-direction: column;
+  .intro {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  .main-nav {
+    order: 2;
+    margin-bottom: 1rem;
+  }
+  .profile-pic {
+    order: 3;
   }
 }
